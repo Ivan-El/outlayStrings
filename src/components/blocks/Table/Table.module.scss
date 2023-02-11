@@ -1,0 +1,15 @@
+.wrapper {
+  height: 100vh;
+  background-color: var(--secondary-background-color);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.body {
+  vertical-align: top;
+}

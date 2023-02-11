@@ -1,0 +1,8 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  width: 235px;
+  height: 100vh;
+  border-right: 1px solid var(--line-color);
+  box-sizing: border-box;
+}

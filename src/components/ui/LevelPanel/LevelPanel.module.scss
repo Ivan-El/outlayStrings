@@ -1,0 +1,161 @@
+.container {
+  position: relative;
+  display: flex;
+  width: 55px;
+  height: 28px;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: transparent;
+  --tree-line-height: 60px;
+  --distance-for-previous: -46px
+}
+
+.active {
+  background-color: var(--line-color);
+}
+
+.add,
+.remove {
+  z-index: 10;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+}
+
+.add {
+  background-image: url('../../../assets/icons/level.svg');
+}
+
+.remove {
+  margin-left: 10px;
+  background-image: url('../../../assets/icons/delete.svg');
+}
+
+.level {
+  z-index: 100;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    z-index: 1;
+    display: block;
+    background-color: #c6c6c6;
+  }
+
+  &::before {
+    top: 14px;
+    left: -6px;
+    width: 12px;
+    height: 1px;
+  }
+
+  &::after {
+    top: var(--distance-for-previous);
+    left: -6px;    
+    width: 1px;
+    height: var(--tree-line-height);
+  }
+}
+
+.level {
+  &-1 {
+    margin-left: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &-2 {
+    margin-left: 20px;
+  }
+
+  &-3 {
+    margin-left: 40px;
+  }
+
+  &-4 {
+    margin-left: 60px;
+  }
+
+  &-5 {
+    margin-left: 80px;
+  }
+
+  &-6 {
+    margin-left: 100px;
+  }
+
+  &-7 {
+    margin-left: 120px;
+  }
+
+  &-8 {
+    margin-left: 140px;
+  }
+
+  &-9 {
+    margin-left: 160px;
+  }
+
+  &-10 {
+    margin-left: 180px;
+  }
+}
+
+.depth {
+  &-1::after {
+    top: calc(var(--distance-for-previous) * 2.28);
+    height: calc(var(--tree-line-height) * 2);
+  }
+
+  &-2::after {
+    top: calc(var(--distance-for-previous) * 3.6);
+    height: calc(var(--tree-line-height) * 3);
+  }
+
+  &-3::after {
+    top: calc(var(--distance-for-previous) * 4.9);
+    height: calc(var(--tree-line-height) * 4);
+  }
+
+  &-4::after {
+    top: calc(var(--distance-for-previous) * 6.2);
+    height: calc(var(--tree-line-height) * 5);
+  }
+
+  &-5::after {
+    top: calc(var(--distance-for-previous) * 7.5);
+    height: calc(var(--tree-line-height) * 6);
+  }
+
+  &-6::after {
+    top: calc(var(--distance-for-previous) * 8.8);
+    height: calc(var(--tree-line-height) * 7);
+  }
+
+  &-7::after {
+    top: calc(var(--distance-for-previous) * 10.12);
+    height: calc(var(--tree-line-height) * 8);
+  }
+
+  &-8::after {
+    top: calc(var(--distance-for-previous) * 11.4);
+    height: calc(var(--tree-line-height) * 9);
+  }
+
+  &-9::after {
+    top: calc(var(--distance-for-previous) * 12.74);
+    height: calc(var(--tree-line-height) * 10);
+  }
+  
+  &-10::after {
+    top: calc(var(--distance-for-previous) * 14.04);
+    height: calc(var(--tree-line-height) * 11);
+  }
+}

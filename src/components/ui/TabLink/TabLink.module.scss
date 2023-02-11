@@ -1,0 +1,13 @@
+.tabLink {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  height: 100%;
+  color: #a1a1aa;
+  text-decoration: none;
+}
+
+.active {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
